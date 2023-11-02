@@ -9,8 +9,8 @@ export default function Header() {
             <div className='flex justify-between items-center max-w-6xl p-3'>
                 <Link to='/'>
                     <h1 className='font-bold text-sm sm:text-xl flex flex-wrap'>
-                        <span className='text-slate-500'> Thang </span>
-                        <span className='text-slate-700'> Web developer </span>
+                        <span className='text-slate-500'> Attendace </span>
+                        <span className='text-slate-700'> System </span>
                     </h1>
                 </Link>
                 <form className='bg-slate-100 p-3 rounded-lg flex items-center'>
@@ -31,6 +31,9 @@ export default function Header() {
                             <li className=' text-slate-500 hover:underline'>Sign In</li>
                         )}
                     </Link>
+                    <p className='text-slate-700 font-semibold uppercase'>{currentUser ? (
+                        currentUser.username
+                    ) : ("")}</p>
                 </ul>
             </div>
         </header >
